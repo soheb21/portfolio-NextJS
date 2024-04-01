@@ -6,7 +6,7 @@ import ClientContactView from './components/client-view/contact'
 import ClientProjectView from './components/client-view/project'
 
 async function extractAllData(currentView) {
-  const response = await fetch(`http://localhost:3000/api/${currentView}/get`, {
+  const response = await fetch(`${process.env.URL}/api/${currentView}/get`, {
     method: "GET",
     cache: "no-cache"
   });
